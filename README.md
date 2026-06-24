@@ -18,3 +18,27 @@ O projeto foi estruturado seguindo boas práticas de separação de responsabili
 * **MVVM (Model-View-ViewModel):** * `Data Layer`: Contém as Entidades (`Person`), DAOs e o próprio Banco de Dados.
   * `ViewModel Layer`: Contém a lógica de negócios (`PersonViewModel`), fazendo a ponte entre os dados e a interface visual.
   * `View Layer`: Contém a interface do usuário (`PersonScreen`).
+
+## 🚀 Como executar o projeto
+
+1. Faça o clone deste repositório:
+```bash
+git clone [https://github.com/GustavoDare/app-pessoas-flutter.git](https://github.com/GustavoDare/app-pessoas-flutter.git)
+```
+
+2. Acesse a pasta do projeto e baixe as dependências:
+```bash
+cd app-pessoas-flutter
+flutter pub get
+```
+
+3. **Passo Essencial (Geração do Banco de Dados):**
+Como o Floor utiliza geração de código, você precisa rodar o comando abaixo para criar o arquivo `app_database.g.dart` antes de compilar o app:
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+4. Execute o aplicativo:
+```bash
+flutter run
+```
